@@ -8,7 +8,7 @@ export const NavBarData = [
   },
   {
     title: "Characters",
-    //path: "/characters",
+    path: "/characters",
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
     subNav: [
@@ -26,7 +26,7 @@ export const NavBarData = [
   },
   {
     title: "Houses",
-    // path: "/houses",
+    path: "/houses",
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
     subNav: [

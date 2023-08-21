@@ -23,8 +23,8 @@ const NavBar = () => {
     <Container>
       <TheLogo />
       <Navi>
-        {NavBarData.map((itemke, index) => {
-          return <SubNavBar item={itemke} key={index} />;
+        {NavBarData.map((item, index) => {
+          return <SubNavBar item={item} key={index} />;
         })}
       </Navi>
     </Container>
