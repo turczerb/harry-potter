@@ -3,26 +3,31 @@ import { NavBarData } from "./NavBarData"; //ez itt maga a data amin majd mappel
 import SubNavBar from "./SubNavBar"; //component
 import TheLogo from "../TheLogo";
 
+const Container = styled.div`
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+`;
+
 const Navi = styled.nav`
   background-color: black;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   width: 100%;
   align-items: center;
-  position: fixed;
+  position: relative;
   height: 60px;
 `;
 
 const NavBar = () => {
   return (
-    <>
+    <Container>
       <TheLogo />
       <Navi>
         {NavBarData.map((itemke, index) => {
           return <SubNavBar item={itemke} key={index} />;
         })}
       </Navi>
-    </>
+    </Container>
   );
 };
 
