@@ -1,7 +1,7 @@
 import styled from "styled-components"; //stiluska
 import { NavBarData } from "./NavBarData"; //ez itt maga a data amin majd mappelünk
 import SubNavBar from "./SubNavBar"; //component
-import TheLogo from "../TheLogo";
+import TheLogo from "./TheLogo";
 
 const Container = styled.div`
   display: grid;
