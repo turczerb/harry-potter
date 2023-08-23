@@ -7,7 +7,7 @@ import styled from "styled-components"; //stiluska
 const FooterAll = styled.div`
   background-color: black;
   padding: 50px;
-  position: absolute;
+  //position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
