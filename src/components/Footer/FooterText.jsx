@@ -1,7 +1,8 @@
 import styled from "styled-components"; //stiluska
 
 const TextStyle = styled.p`
-  color: white;
+  letter-spacing: 0.25px;
+  color: #9fa1ad;
 `;
 
 const FooterText = ({ item }) => {
