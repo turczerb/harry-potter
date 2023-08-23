@@ -22,7 +22,14 @@ const ElementConti = styled.div`
 
 const DropDownContainer = styled.div``;
 
-const SubElement = styled(Link)``;
+const SubElement = styled(Link)`
+  text-decoration: none;
+  color: white;
+  &:hover {
+    border-bottom: 2px solid #946b2d;
+    background-color: #414757;
+    cursor: pointer;
+`;
 
 const SubNavBar = ({ item }) => {
   //ez itt miért is kell??

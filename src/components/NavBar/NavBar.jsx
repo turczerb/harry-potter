@@ -10,13 +10,23 @@ const Container = styled.div`
 
 const Navi = styled.nav`
   background-color: black;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  //display: grid;
+  //grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  //display: flex;
+  //justify-content: space-between;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
   width: 100%;
   align-items: center;
-  position: relative;
   height: 60px;
+  position: relative;
+  padding: 10px 0 2px;
 `;
+
+const NavContainer = styled.div``;
 
 const NavBar = () => {
   return (

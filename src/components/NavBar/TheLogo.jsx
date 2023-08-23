@@ -3,10 +3,12 @@ import styled from "styled-components"; //stiluska
 const Logo = styled.div`
   background-color: #242633;
   color: white;
-  height: 80px;
+  height: 90px;
   position: fixed;
   width: 100%;
   display: flex;
+  justify-content: center;
+  z-index: 9998;
 `;
 
 const Imagem = styled.img`
