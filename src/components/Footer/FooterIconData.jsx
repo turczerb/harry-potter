@@ -1,5 +1,4 @@
 import * as LiaIcons from "react-icons/lia";
-
 import * as BsIcons from "react-icons/bs";
 
 export const FooterIconData = [
