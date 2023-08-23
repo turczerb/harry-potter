@@ -20,13 +20,12 @@ const Navi = styled.nav`
   justify-content: space-evenly;
 
   width: 100%;
-  align-items: center;
   height: 60px;
-  position: relative;
   padding: 10px 0 2px;
+  margin-top: 90px;
+  position: fixed;
+  z-index: 9998;
 `;
-
-const NavContainer = styled.div``;
 
 const NavBar = () => {
   return (

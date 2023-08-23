@@ -9,6 +9,7 @@ const NewCardContainer = styled.div`
   background-repeat: no-repeat;
   background-color: black;
   background-position: center;
+  margin-top: 150px;
 `;
 const NewCard = () => {
   return (
