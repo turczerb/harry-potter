@@ -1,4 +1,5 @@
 import styled from "styled-components"; //stiluska
+const images = require.context("../../images/");
 
 const Logo = styled.div`
   background-color: #242633;
@@ -16,11 +17,12 @@ const Imagem = styled.img`
 `;
 
 const TheLogo = () => {
+  let img = images("./potter-logo.png");
   return (
     <div>
       <Logo>
         <a href="/">
-          <Imagem src={require("./potter-logo.png")} alt="pic"></Imagem>
+          <Imagem src={img} alt="pic"></Imagem>
         </a>
       </Logo>
     </div>
