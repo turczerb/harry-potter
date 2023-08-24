@@ -3,7 +3,9 @@ import styled from "styled-components"; //css
 const images = require.context("../../images");
 
 //ez az ami az egész 1db könyv kártyát tartalmazza
-const ProductCard = styled.div``;
+const ProductCard = styled.div`
+  margin: 10px;
+`;
 
 const ProductCardInner = styled.div``;
 
@@ -30,12 +32,9 @@ const Book = ({ item }) => {
       <ProductCardInner>
         <KlikkContainer to={item.path}>
           <Nemtom>
-            <div>
-              <Picture src={img} alt="pic"></Picture>
-            </div>
-            <div>
-              <h4>{item.title}</h4>
-            </div>
+            <Picture src={img} alt="pic"></Picture>
+
+            <h4>{item.title}</h4>
           </Nemtom>
         </KlikkContainer>
       </ProductCardInner>
