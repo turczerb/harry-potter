@@ -5,6 +5,7 @@ export const BookData = [
     bookTypes: [
       {
         path: "philosophers-stone",
+        id: 1,
         writer: "J.K. Rowling",
         title: "Harry Potter and the Philosopher's Stone",
         year: 1997,
@@ -15,6 +16,7 @@ export const BookData = [
       },
       {
         path: "chamber-of-secrets",
+        id: 2,
         writer: "J.K. Rowling",
         title: "Harry Potter and the Chamber of Secrets",
         year: 1998,
@@ -25,6 +27,7 @@ export const BookData = [
       },
       {
         path: "prisoners-of-azkaban",
+        id: 3,
         writer: "J.K. Rowling",
         title: "Harry Potter and the Prisoner of Azkaban",
         year: 1999,
@@ -35,6 +38,7 @@ export const BookData = [
       },
       {
         path: "goblet-of-fire",
+        id: 4,
         writer: "J.K. Rowling",
         title: "Harry Potter and the Goblet of Fire",
         year: 2000,
@@ -45,6 +49,7 @@ export const BookData = [
       },
       {
         path: "order-of-the-phoenix",
+        id: 5,
         writer: "J.K. Rowling",
         title: "Harry Potter and the Order of the Phoenix",
         year: 2003,
@@ -55,6 +60,7 @@ export const BookData = [
       },
       {
         path: "the-half-blood-prince",
+        id: 6,
         writer: "J.K. Rowling",
         title: "Harry Potter and the Half-Blood Prince",
         year: 2005,
@@ -65,6 +71,7 @@ export const BookData = [
       },
       {
         path: "the-deadthly-hallows",
+        id: 7,
         writer: "J.K. Rowling",
         title: "Harry Potter and the Deathly Hallows",
         year: 2007,
@@ -81,6 +88,7 @@ export const BookData = [
     bookTypes: [
       {
         path: "fantastic-beasts-and-where-to-find-them",
+        id: 8,
         writer: "J.K. Rowling",
         title: "Fantastic Beasts and Where to Find Them",
         year: 2001,
@@ -90,6 +98,7 @@ export const BookData = [
       },
       {
         path: "fantastic-beasts-the-crimes-of-grindelwald",
+        id: 9,
         writer: "J.K. Rowling",
         title: "Fantastic Beasts: The Crimes of Grindelwald",
         year: 2018,
@@ -99,6 +108,7 @@ export const BookData = [
       },
       {
         path: "fantastic-beasts-the-sercrets-of-dumbi",
+        id: 10,
         writer: "J.K. Rowling",
         title: "Fantastic Beasts: The Secrets of Dumbledore",
         year: 2018,
@@ -114,6 +124,7 @@ export const BookData = [
     bookTypes: [
       {
         path: "fantastic-beasts-and where-to-find-them-schoolbook",
+        id: 11,
         writer: "J.K. Rowling",
         title: "Fantastic Beasts and Where to Find Them",
         year: 2001,
@@ -123,6 +134,7 @@ export const BookData = [
       },
       {
         path: "quidditch-through-the-ages",
+        id: 12,
         writer: "J.K. Rowling",
         title: "Quidditch Through the Ages",
         year: 2001,
@@ -132,6 +144,7 @@ export const BookData = [
       },
       {
         path: "the-tales-of-beedle-the-bard",
+        id: 13,
         writer: "J.K. Rowling",
         title: "The Tales of Beedle The Bard",
         year: 2008,

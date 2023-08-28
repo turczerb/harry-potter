@@ -35,7 +35,7 @@ const Book = ({ item }) => {
   return (
     <ProductCard>
       <ProductCardInner>
-        <KlikkContainer to={item.path}>
+        <KlikkContainer to={item.title}>
           <Nemtom>
             <Picture src={img} alt="pic"></Picture>
 
