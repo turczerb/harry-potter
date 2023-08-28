@@ -4,14 +4,14 @@ const images = require.context("../../images");
 
 //ez az ami az egész 1db könyv kártyát tartalmazza
 const ProductCard = styled.div`
-  margin: 10px;
+  margin: 5px;
 `;
 
 const ProductCardInner = styled.div``;
 
 const KlikkContainer = styled(Link)`
   text-decoration: none;
-  color: black;
+  color: white;
 `;
 
 const Nemtom = styled.div`
@@ -23,6 +23,11 @@ const Nemtom = styled.div`
 
 const Picture = styled.img`
   height: 400px;
+  border-radius: 10px;
+`;
+
+const Title = styled.h4`
+text:align:center;
 `;
 
 const Book = ({ item }) => {
@@ -34,7 +39,7 @@ const Book = ({ item }) => {
           <Nemtom>
             <Picture src={img} alt="pic"></Picture>
 
-            <h4>{item.title}</h4>
+            <Title>{item.title}</Title>
           </Nemtom>
         </KlikkContainer>
       </ProductCardInner>
