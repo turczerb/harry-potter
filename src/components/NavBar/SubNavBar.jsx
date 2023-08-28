@@ -1,6 +1,7 @@
 import { useState } from "react"; //nyitva vagy csukva van a sub nav bár
 import { Link } from "react-router-dom"; //tudjunk másik oldalra jump
 import styled from "styled-components"; //css
+const images = require.context("../../images");
 
 //Book/Characters felirat csak az semmi más
 const Element = styled(Link)`
@@ -20,15 +21,31 @@ const ElementConti = styled.div`
   }
 `;
 
-const DropDownContainer = styled.div``;
+const DropDownContainer = styled.div`
+  position: absolute; //Changed
+  display: block;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.3);
+`;
 
 const SubElement = styled(Link)`
   text-decoration: none;
+  //margin:5px;
   color: white;
+  
+  
+
   &:hover {
     border-bottom: 2px solid #946b2d;
     background-color: #414757;
     cursor: pointer;
+`;
+
+const Picture = styled.img`
+  height: 110px;
+  margin: 10px;
 `;
 
 const SubNavBar = ({ item }) => {
@@ -54,9 +71,11 @@ const SubNavBar = ({ item }) => {
           <DropDownContainer>
             {showSubElement &&
               item.subNav.map((item, index) => {
+                let img = images(item.image);
                 return (
                   <SubElement to={item.path} key={index}>
                     <div>{item.title}</div>
+                    <Picture src={img} alt="pic" />
                   </SubElement>
                 );
               })}

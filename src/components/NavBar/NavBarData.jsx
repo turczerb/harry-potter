@@ -8,7 +8,7 @@ export const NavBarData = [
   },
   {
     title: "Characters",
-    path: "/characters",
+
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
     subNav: [
@@ -16,17 +16,19 @@ export const NavBarData = [
         title: "Staff",
         path: "characters/staff",
         icon: <IoIcons.IoIosPaper />,
+        image: "./hp1.webp",
       },
       {
         title: "Students",
         path: "characters/students",
         icon: <IoIcons.IoIosPaper />,
+        image: "./hp1.webp",
       },
     ],
   },
   {
     title: "Houses",
-    path: "/houses",
+
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
     subNav: [
@@ -40,19 +42,19 @@ export const NavBarData = [
         title: "Hufflepuff",
         path: "houses/hufflepuff",
         icon: <IoIcons.IoIosPaper />,
-        image: "./hufflepuff.jpg",
+        image: "./hufflepuff.png",
       },
       {
         title: "Ravenclaw",
         path: "houses/ravenclaw",
         icon: <IoIcons.IoIosPaper />,
-        image: "./src/components/NavBar/ravenclawr.jpg",
+        image: "./ravenclaw.png",
       },
       {
         title: "Slytherin",
         path: "houses/slytherin",
         icon: <IoIcons.IoIosPaper />,
-        image: "src/components/NavBar/slytherin.jpg",
+        image: "./slytherin.png",
       },
     ],
   },
