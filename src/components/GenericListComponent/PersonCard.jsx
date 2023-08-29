@@ -3,6 +3,20 @@ import Person from "./Person";
 import useFetch from "../../hooks/useFetch";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import styled from "styled-components"; //css
+
+const Container = styled.div`
+  width: 100%;
+  background-color: green;
+  padding-top: 250px;
+  padding-bottom: 60px;
+`;
+
+const OutContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+`;
 
 const PersonCard = () => {
   const { path } = useParams();
@@ -14,12 +28,24 @@ const PersonCard = () => {
   console.log(data);
 
   return (
-    <div>
-      <div>personcard</div>
-      <div>
-        <Person />
-      </div>
-    </div>
+    <Container>
+      <OutContainer>
+        {data &&
+          data.slice(0, 9).map((item, index) => {
+            return (
+              <Person
+                key={index}
+                image={item.image}
+                name={item.name}
+                house={item.house}
+                dateOfBirth={item.dateOfBirth}
+                patronus={item.patronus}
+                actor={item.actor}
+              />
+            );
+          })}
+      </OutContainer>
+    </Container>
   );
 };
 
