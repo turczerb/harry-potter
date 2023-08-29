@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 const Person = (props) => {
+  const [showMore, setShowMore] = useState(false);
+
   return (
     <div>
       <div>
@@ -10,8 +14,7 @@ const Person = (props) => {
           {props.house}
           {props.dateOfBirth}
           {props.patronus}
-          {props.wand.wood}
-          {props.wand.core}
+
           {props.actor}
         </div>
       </div>
