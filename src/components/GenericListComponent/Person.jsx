@@ -2,29 +2,36 @@ import { useState } from "react";
 import styled from "styled-components"; //css
 
 const OutContainer = styled.div`
-  border: 1px solid blue;
+  /6border: 1px solid blue;
   padding: 15px;
-  width: 60%;
+  width: 80%;
 `;
 
-const InnerContainer = styled.div``;
+const InnerContainer = styled.div`
+  display: flex;
+`;
 const Picture = styled.img`
-  height: 300px;
+  margin-right: 15px;
+  width: 270px;
 `;
 
-const TitleContainer = styled.div``;
+const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 const MoreInfoContainer = styled.div``;
 
 const Person = (props) => {
   const [showMore, setShowMore] = useState(false);
 
-  return (
+  return showMore ? (
     <OutContainer>
       <InnerContainer>
         <TitleContainer>
           <Picture src={props.image} alt="pic" />
           <h2>{props.name}</h2>
         </TitleContainer>
+
         <MoreInfoContainer>
           <p> House {props.house}</p>
           <p> Date of birth {props.dateOfBirth}</p>
@@ -32,7 +39,17 @@ const Person = (props) => {
           <p> Actor {props.actor}</p>
         </MoreInfoContainer>
       </InnerContainer>
-      <button>Show more</button>
+      <button onClick={() => setShowMore(!showMore)}>Show less</button>
+    </OutContainer>
+  ) : (
+    <OutContainer>
+      <InnerContainer>
+        <TitleContainer>
+          <Picture src={props.image} alt="pic" />
+          <h2>{props.name}</h2>
+        </TitleContainer>
+      </InnerContainer>
+      <button onClick={() => setShowMore(!showMore)}>Show more</button>
     </OutContainer>
   );
 };

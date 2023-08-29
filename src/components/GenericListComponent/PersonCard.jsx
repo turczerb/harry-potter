@@ -7,7 +7,7 @@ import styled from "styled-components"; //css
 
 const Container = styled.div`
   width: 100%;
-  background-color: green;
+  background-color: black;
   padding-top: 250px;
   padding-bottom: 60px;
 `;
@@ -16,6 +16,7 @@ const OutContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 15px;
+  color: white;
 `;
 
 const PersonCard = () => {
