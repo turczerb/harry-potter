@@ -1,5 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components"; //css
+import useSound from "use-sound";
+import magic from "../../sounds/magic.wav";
 
 const OutContainer = styled.div`
   /6border: 1px solid blue;
@@ -18,11 +20,22 @@ const Picture = styled.img`
 const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+`;
+
+const Btn = styled.button`
+  background-color: grey;
 `;
 const MoreInfoContainer = styled.div``;
 
 const Person = (props) => {
   const [showMore, setShowMore] = useState(false);
+  const [play] = useSound(magic);
+
+  const checkMore = () => {
+    setShowMore(!showMore);
+    play();
+  };
 
   return showMore ? (
     <OutContainer>
@@ -30,6 +43,7 @@ const Person = (props) => {
         <TitleContainer>
           <Picture src={props.image} alt="pic" />
           <h2>{props.name}</h2>
+          <Btn onClick={() => checkMore()}>Show less</Btn>
         </TitleContainer>
 
         <MoreInfoContainer>
@@ -39,7 +53,6 @@ const Person = (props) => {
           <p> Actor {props.actor}</p>
         </MoreInfoContainer>
       </InnerContainer>
-      <button onClick={() => setShowMore(!showMore)}>Show less</button>
     </OutContainer>
   ) : (
     <OutContainer>
@@ -47,9 +60,9 @@ const Person = (props) => {
         <TitleContainer>
           <Picture src={props.image} alt="pic" />
           <h2>{props.name}</h2>
+          <Btn onClick={() => checkMore()}>Show more</Btn>
         </TitleContainer>
       </InnerContainer>
-      <button onClick={() => setShowMore(!showMore)}>Show more</button>
     </OutContainer>
   );
 };

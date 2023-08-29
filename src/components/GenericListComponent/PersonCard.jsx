@@ -4,6 +4,7 @@ import useFetch from "../../hooks/useFetch";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components"; //css
+const images = require.context("../../images");
 
 const Container = styled.div`
   width: 100%;
@@ -17,6 +18,8 @@ const OutContainer = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 15px;
   color: white;
+  place-items: center;
+  margin-left: 60px;
 `;
 
 const PersonCard = () => {
@@ -31,20 +34,36 @@ const PersonCard = () => {
   return (
     <Container>
       <OutContainer>
-        {data &&
-          data.slice(0, 9).map((item, index) => {
-            return (
-              <Person
-                key={index}
-                image={item.image}
-                name={item.name}
-                house={item.house}
-                dateOfBirth={item.dateOfBirth}
-                patronus={item.patronus}
-                actor={item.actor}
-              />
-            );
-          })}
+        {data && data.image
+          ? data &&
+            data.slice(0, 9).map((item, index) => {
+              return (
+                <Person
+                  key={index}
+                  image={item.image}
+                  name={item.name}
+                  house={item.house}
+                  dateOfBirth={item.dateOfBirth}
+                  patronus={item.patronus}
+                  actor={item.actor}
+                />
+              );
+            })
+          : data &&
+            data.slice(0, 9).map((item, index) => {
+              // let img = images(item.image);
+              return (
+                <Person
+                  key={index}
+                  image={item.image}
+                  name={item.name}
+                  house={item.house}
+                  dateOfBirth={item.dateOfBirth}
+                  patronus={item.patronus}
+                  actor={item.actor}
+                />
+              );
+            })}
       </OutContainer>
     </Container>
   );
