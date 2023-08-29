@@ -4,7 +4,6 @@ import useFetch from "../../hooks/useFetch";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components"; //css
-const images = require.context("../../images");
 
 const Container = styled.div`
   width: 100%;
@@ -34,36 +33,20 @@ const PersonCard = () => {
   return (
     <Container>
       <OutContainer>
-        {data && data.image
-          ? data &&
-            data.slice(0, 9).map((item, index) => {
-              return (
-                <Person
-                  key={index}
-                  image={item.image}
-                  name={item.name}
-                  house={item.house}
-                  dateOfBirth={item.dateOfBirth}
-                  patronus={item.patronus}
-                  actor={item.actor}
-                />
-              );
-            })
-          : data &&
-            data.slice(0, 9).map((item, index) => {
-              // let img = images(item.image);
-              return (
-                <Person
-                  key={index}
-                  image={item.image}
-                  name={item.name}
-                  house={item.house}
-                  dateOfBirth={item.dateOfBirth}
-                  patronus={item.patronus}
-                  actor={item.actor}
-                />
-              );
-            })}
+        {data &&
+          data.slice(0, 9).map((item, index) => {
+            return (
+              <Person
+                key={index}
+                image={item.image}
+                name={item.name}
+                house={item.house}
+                dateOfBirth={item.dateOfBirth}
+                patronus={item.patronus}
+                actor={item.actor}
+              />
+            );
+          })}
       </OutContainer>
     </Container>
   );
