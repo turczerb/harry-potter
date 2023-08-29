@@ -7,7 +7,7 @@ import styled from "styled-components"; //css
 
 const Container = styled.div`
   width: 100%;
-  background-color: black;
+  background-color: #242633;
   padding-top: 250px;
   padding-bottom: 60px;
 `;

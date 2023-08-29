@@ -7,6 +7,7 @@ const OutContainer = styled.div`
   /6border: 1px solid blue;
   padding: 15px;
   width: 80%;
+  font-family: Sofia Pro, serif;
 `;
 
 const InnerContainer = styled.div`
@@ -15,6 +16,7 @@ const InnerContainer = styled.div`
 const Picture = styled.img`
   margin-right: 15px;
   width: 270px;
+  border-radius: 15px;
 `;
 
 const TitleContainer = styled.div`
@@ -25,6 +27,12 @@ const TitleContainer = styled.div`
 
 const Btn = styled.button`
   background-color: grey;
+  font-family: Sofia Pro, serif;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  padding: 10px 25px 12px;
 `;
 const MoreInfoContainer = styled.div``;
 
@@ -43,7 +51,9 @@ const Person = (props) => {
         <TitleContainer>
           <Picture src={props.image} alt="pic" />
           <h2>{props.name}</h2>
-          <Btn onClick={() => checkMore()}>Show less</Btn>
+          <Btn onClick={() => checkMore()}>
+            <span>Show less</span>
+          </Btn>
         </TitleContainer>
 
         <MoreInfoContainer>
@@ -60,7 +70,9 @@ const Person = (props) => {
         <TitleContainer>
           <Picture src={props.image} alt="pic" />
           <h2>{props.name}</h2>
-          <Btn onClick={() => checkMore()}>Show more</Btn>
+          <Btn onClick={() => checkMore()}>
+            <span>Show more</span>
+          </Btn>
         </TitleContainer>
       </InnerContainer>
     </OutContainer>
