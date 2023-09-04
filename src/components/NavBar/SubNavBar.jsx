@@ -1,6 +1,7 @@
 import { useState } from "react"; //nyitva vagy csukva van a sub nav bár
 import { Link } from "react-router-dom"; //tudjunk másik oldalra jump
 import styled from "styled-components"; //css
+import useComponentVisible from "../../hooks/useComponentVisible";
 const images = require.context("../../images");
 
 //Book/Characters felirat csak az semmi más
@@ -61,25 +62,31 @@ const Title = styled.div`
 const SubNavBar = ({ item }) => {
   //ez itt miért is kell??
   const [showSubElement, setShowSubElement] = useState(false);
+  const { ref, isComponentVisible, setIsComponentVisible } =
+    useComponentVisible(false);
 
   const showTheElement = () => {
     //ez mindig az ellen tettjére fogja változtatni a statet.
     setShowSubElement(!showSubElement);
   };
 
+  const showComponent = () => {
+    setIsComponentVisible(!isComponentVisible);
+  };
+
   return (
     //na itt ternaryval: valami
     <div>
-      <Element to={item.path} onClick={item.subNav && showTheElement}>
+      <Element to={item.path} onClick={item.subNav && showComponent}>
         <div>
           <span>{item.title}</span>
-          {item.subNav && showSubElement
+          {item.subNav && isComponentVisible
             ? item.iconOpened
             : item.subNav
             ? item.iconClosed
             : null}
-          <DropDownContainer>
-            {showSubElement &&
+          <DropDownContainer ref={ref}>
+            {isComponentVisible &&
               item.subNav.map((item, index) => {
                 let img = images(item.image);
                 return (
