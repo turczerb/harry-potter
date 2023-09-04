@@ -2,6 +2,7 @@ import { useState } from "react";
 import styled from "styled-components"; //css
 import useSound from "use-sound";
 import magic from "../../sounds/magic.wav";
+const images = require.context("../../images/");
 
 const OutContainer = styled.div`
   /6border: 1px solid blue;
@@ -36,7 +37,12 @@ const Btn = styled.button`
 `;
 const MoreInfoContainer = styled.div``;
 
+const SmlPic = styled.img`
+  width: 150px;
+`;
+
 const Person = (props) => {
+  let img = images("./potter-logo.png");
   const [showMore, setShowMore] = useState(false);
   const [play] = useSound(magic);
 
@@ -61,6 +67,7 @@ const Person = (props) => {
           <p> Date of birth {props.dateOfBirth}</p>
           <p> Patronus {props.patronus}</p>
           <p> Actor {props.actor}</p>
+          <SmlPic src={img} alt="pic" />
         </MoreInfoContainer>
       </InnerContainer>
     </OutContainer>

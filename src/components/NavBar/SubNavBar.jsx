@@ -27,6 +27,7 @@ const DropDownContainer = styled.div`
   z-index: 1;
   display: flex;
   justify-content: center;
+
   background-color: rgba(255, 255, 255, 0.3);
 `;
 
@@ -34,7 +35,7 @@ const SubElement = styled(Link)`
   text-decoration: none;
   //margin:5px;
   color: white;
-  
+
   
 
   &:hover {
@@ -46,6 +47,12 @@ const SubElement = styled(Link)`
 const Picture = styled.img`
   height: 110px;
   margin: 10px;
+`;
+
+const Title = styled.div`
+  display: flex;
+  place-items: center;
+  justify-content: space-evenly;
 `;
 
 const SubNavBar = ({ item }) => {
@@ -74,7 +81,7 @@ const SubNavBar = ({ item }) => {
                 let img = images(item.image);
                 return (
                   <SubElement to={item.path} key={index}>
-                    <div>{item.title}</div>
+                    <Title>{item.title}</Title>
                     <Picture src={img} alt="pic" />
                   </SubElement>
                 );
