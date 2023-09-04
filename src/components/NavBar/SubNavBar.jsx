@@ -27,7 +27,9 @@ const DropDownContainer = styled.div`
   z-index: 1;
   display: flex;
   justify-content: center;
-
+  webkit-flex-direction: row;
+  text-align: center;
+  transform: translate(-40%);
   background-color: rgba(255, 255, 255, 0.3);
 `;
 
@@ -47,6 +49,7 @@ const SubElement = styled(Link)`
 const Picture = styled.img`
   height: 110px;
   margin: 10px;
+  width: 110px;
 `;
 
 const Title = styled.div`
