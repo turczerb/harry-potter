@@ -66,7 +66,7 @@ const SubNavBar = ({ item }) => {
     useComponentVisible(false);
 
   const showTheElement = () => {
-    //ez mindig az ellen tettjére fogja változtatni a statet.
+    //ez mindig az ellen tettjére fogja változtatni a statet.ezt most kikötöttem a másik state van
     setShowSubElement(!showSubElement);
   };
 

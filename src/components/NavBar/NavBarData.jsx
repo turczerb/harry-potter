@@ -22,7 +22,7 @@ export const NavBarData = [
         title: "Students",
         path: "characters/students",
         icon: <IoIcons.IoIosPaper />,
-        image: "./harry.png",
+        image: "./kidz.png",
       },
     ],
   },
