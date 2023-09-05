@@ -9,10 +9,11 @@ export default function useComponentVisible(initialIsVisible) {
     if (ref.current && !ref.current.contains(event.target)) {
       setIsComponentVisible(false);
       console.log("lefut ez a szar");
+      console.log(isComponentVisible);
     }
   };
 
-  useEffect(() => {
+  useEffect((e) => {
     document.addEventListener("click", handleClickOutside, true);
     return () => {
       document.removeEventListener("click", handleClickOutside, true);

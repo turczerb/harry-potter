@@ -68,15 +68,20 @@ const SubNavBar = ({ item }) => {
   const showTheElement = () => {
     //ez mindig az ellen tettjére fogja változtatni a statet.ezt most kikötöttem a másik state van
     setShowSubElement(!showSubElement);
+    console.log("ide bejövök v mivan");
+    console.log(showSubElement);
   };
 
-  const showComponent = () => {
+  const showComponent = (e) => {
+    e.preventDefault();
+    console.log("lapát");
     setIsComponentVisible(!isComponentVisible);
+    console.log(isComponentVisible);
   };
 
   return (
     //na itt ternaryval: valami
-    <div>
+    <div ref={ref}>
       <Element to={item.path} onClick={item.subNav && showComponent}>
         <div>
           <span>{item.title}</span>
@@ -85,7 +90,7 @@ const SubNavBar = ({ item }) => {
             : item.subNav
             ? item.iconClosed
             : null}
-          <DropDownContainer ref={ref}>
+          <DropDownContainer>
             {isComponentVisible &&
               item.subNav.map((item, index) => {
                 let img = images(item.image);
