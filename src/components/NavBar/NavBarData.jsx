@@ -62,8 +62,4 @@ export const NavBarData = [
     title: "Movies",
     path: "/movies",
   },
-  {
-    title: "Spells",
-    path: "/spells",
-  },
 ];
