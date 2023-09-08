@@ -1,13 +1,11 @@
 import { Link } from "react-router-dom"; //tudjunk másik oldalra jump
 import styled from "styled-components"; //css
-const images = require.context("../../images");
+const images = require.context("../../images"); //képek ezzal a változóvaé jönnek be
 
 //ez az ami az egész 1db könyv kártyát tartalmazza
 const ProductCard = styled.div`
   margin: 5px;
 `;
-
-const ProductCardInner = styled.div``;
 
 const KlikkContainer = styled(Link)`
   text-decoration: none;
@@ -34,15 +32,13 @@ const Book = ({ item }) => {
   let img = images(item.image);
   return (
     <ProductCard>
-      <ProductCardInner>
-        <KlikkContainer to={item.title}>
-          <Nemtom>
-            <Picture src={img} alt="pic"></Picture>
+      <KlikkContainer to={item.title}>
+        <Nemtom>
+          <Picture src={img} alt="pic"></Picture>
 
-            <Title>{item.title}</Title>
-          </Nemtom>
-        </KlikkContainer>
-      </ProductCardInner>
+          <Title>{item.title}</Title>
+        </Nemtom>
+      </KlikkContainer>
     </ProductCard>
   );
 };
